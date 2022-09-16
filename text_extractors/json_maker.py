@@ -1,3 +1,5 @@
+# Second change: September 16th, 2022
+
 import json
 from sys import argv
 
@@ -10,7 +12,7 @@ pasal_dict = dict()
 
 # Load text
 try:
-    with open(filename, 'r') as raw_file:
+    with open(filename, 'r', encoding= "utf-8") as raw_file:
         content = raw_file.readlines()
         content_text = ''.join(content)
         split_content_text = content_text.split('~')
@@ -31,11 +33,13 @@ try:
         pasal, isi = sentence.split('|')
         ayat = isi.split('#')[1:]
         pasal_dict[pasal] = ayat
-        
-    # Dump parent dictionary to JSON
+
     with open(argv[2], 'w') as json_uu:
-        json.dump(uu_dict, json_uu)
-        print('DONE!')
+        json.dump(uu_dict, json_uu, indent= 4) # Add indentation to JSON
         
 except ValueError as e:
     print(e)
+
+else:
+    # Dump parent dictionary to JSON
+        print('DONE!')
