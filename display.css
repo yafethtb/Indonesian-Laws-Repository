@@ -1,0 +1,46 @@
+body{
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 20% 60% 20%;
+}
+
+.container{
+    grid-area: 1/2/4/3;
+    background-color: antiquewhite;
+    margin: 2vh;
+    padding: 2vh;
+}
+
+.pasal{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.ayat{    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 3vmin;
+    padding: 3vmin;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    transition: 0.25s;
+}
+
+.ayat p{
+    margin: 2em;
+    padding-left: 10em;
+    padding-right: 10em;
+    text-align: justify;
+    overflow-x: scroll;
+    
+}
+
+.ayat:hover{
+    background-color:steelblue;
+    color: white;
+    box-shadow: 0px 0px 2vh gray;
+    border-radius: 1em;
+}
